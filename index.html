@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050505">
+<meta name="description" content="ZERROX — From India • Muslim • Alhamdulillah">
+<title>ZERROX • From India • Muslim • Alhamdulillah</title>
+<style>
+:root{
+  --bg:#030303; --card:#0b0b0d; --gold:#ffb300; --gold2:#ffe08a;
+  --white:#f7f7f7; --muted:#bdbdbd; --green:#35ff83; --blue:#42a5ff;
+  --purple:#b65cff; --pink:#ff3d81; --cyan:#48eaff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:radial-gradient(circle at 50% -10%,#1a1408 0,#060606 28%,#020202 70%);
+  color:var(--white);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.22;
+  background-image:radial-gradient(#fff 1px,transparent 1px);background-size:85px 85px;
+  animation:stars 20s linear infinite;
+}
+@keyframes stars{to{background-position:85px 85px}}
+a{color:inherit;text-decoration:none}
+.container{width:min(1180px,92%);margin:auto}
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:74px;background:rgba(3,3,3,.78);backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.09);display:flex;align-items:center;
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:950;font-size:27px;letter-spacing:-2px;color:#fff;position:relative}
+.logo:after{content:"♛";position:absolute;font-size:17px;color:var(--gold);left:9px;top:-19px;filter:drop-shadow(0 0 8px #ffb300)}
+.navlinks{display:flex;gap:34px;align-items:center}
+.navlinks a{font-size:15px;color:#ddd;position:relative;padding:8px 0;transition:.3s}
+.navlinks a:hover,.navlinks a.active{color:var(--gold2)}
+.navlinks a:after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--gold);transform:scaleX(0);transition:.3s;box-shadow:0 0 12px var(--gold)}
+.navlinks a:hover:after,.navlinks a.active:after{transform:scaleX(1)}
+.navbtn{border:1px solid var(--gold);padding:11px 20px;border-radius:30px;box-shadow:0 0 18px rgba(255,179,0,.15);transition:.3s}
+.navbtn:hover{transform:translateY(-2px);box-shadow:0 0 30px rgba(255,179,0,.4)}
+.menu{display:none;font-size:27px;background:none;border:0;color:#fff}
+
+.hero{min-height:760px;padding-top:105px;position:relative;display:grid;place-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:-3;background:
+  radial-gradient(circle at 72% 38%,rgba(255,187,50,.12),transparent 24%),
+  radial-gradient(circle at 18% 32%,rgba(255,130,0,.12),transparent 26%),
+  linear-gradient(180deg,#030303 0%,#071019 55%,#020202 100%);
+}
+.moon{position:absolute;right:29%;top:135px;width:88px;height:88px;border-radius:50%;background:#f4f4ef;box-shadow:0 0 35px #fff;animation:float 5s ease-in-out infinite}
+.moon:after{content:"";position:absolute;left:25px;top:-8px;width:88px;height:88px;border-radius:50%;background:#05080b}
+@keyframes float{50%{transform:translateY(-12px) rotate(5deg)}}
+.flag{
+  position:absolute;left:-2%;top:180px;width:47%;height:290px;transform:skewY(-3deg);
+  border-radius:0 30% 25% 0;
+  background:linear-gradient(#ff7b18 0 33%,#f7f7f7 33% 66%,#0b8f45 66%);
+  box-shadow:0 22px 50px #000,0 0 30px rgba(255,137,0,.18);
+  overflow:hidden;animation:flagwave 4s ease-in-out infinite;transform-origin:left center;
+}
+.flag:before{content:"";position:absolute;left:50%;top:50%;width:76px;height:76px;transform:translate(-50%,-50%);border:3px solid #1d376b;border-radius:50%;box-shadow:inset 0 0 0 13px #fff}
+.flag:after{content:"";position:absolute;left:50%;top:50%;width:9px;height:9px;transform:translate(-50%,-50%);background:#1d376b;border-radius:50%;box-shadow:0 -22px 0 -2px #1d376b,0 22px 0 -2px #1d376b,22px 0 0 -2px #1d376b,-22px 0 0 -2px #1d376b}
+@keyframes flagwave{50%{transform:skewY(2deg) rotate(-1deg)}}
+.hero-content{text-align:center;position:relative;z-index:2;margin-top:120px}
+.kicker{font-size:14px;letter-spacing:4px;color:var(--gold2);margin-bottom:12px;animation:fadeUp .9s both}
+.bismillah{font-size:42px;color:#ffd46b;text-shadow:0 0 25px rgba(255,190,70,.4);margin-bottom:8px;animation:fadeUp 1s .1s both}
+.hero h1{
+  font-size:clamp(72px,12vw,155px);line-height:.84;letter-spacing:-7px;font-weight:950;
+  background:linear-gradient(180deg,#fff 0,#bdbdbd 45%,#fff 62%,#8b5b18 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 15px 25px rgba(0,0,0,.8));animation:heroIn 1.2s .15s both;
+}
+@keyframes heroIn{from{opacity:0;transform:translateY(40px) scale(.92)}to{opacity:1;transform:none}}
+.hero-sub{margin:22px auto 12px;font-size:14px;letter-spacing:4px;color:#eee;animation:fadeUp 1s .35s both}
+.hero-sub b{color:var(--gold2)}
+.mini-line{color:#fff;font-size:26px;margin:12px 0;animation:fadeUp 1s .45s both}
+.hero-note{color:#ddd;letter-spacing:2px;font-size:13px;animation:fadeUp 1s .55s both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.scroll{margin-top:38px;display:inline-flex;flex-direction:column;gap:8px;align-items:center;color:#aaa;font-size:11px;letter-spacing:3px;animation:bob 2s infinite}
+.scroll span{width:1px;height:38px;background:linear-gradient(var(--gold),transparent)}
+@keyframes bob{50%{transform:translateY(7px)}}
+
+.section{padding:48px 0}
+.identity{
+  border:1px solid rgba(255,255,255,.18);border-radius:26px;padding:34px 24px;text-align:center;
+  background:linear-gradient(120deg,rgba(255,179,0,.05),rgba(255,255,255,.025),rgba(255,179,0,.05));
+  box-shadow:0 0 40px rgba(255,179,0,.05);position:relative;overflow:hidden;
+}
+.identity:before{content:"";position:absolute;inset:-50%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);transform:rotate(20deg);animation:shine 5s linear infinite}
+@keyframes shine{to{transform:translateX(70%) rotate(20deg)}}
+.eyebrow{font-size:12px;letter-spacing:5px;color:var(--gold);margin-bottom:16px}
+.identity p{font-size:clamp(22px,4vw,39px);font-style:italic;position:relative}
+.identity p span{color:var(--gold);font-size:1.08em}
+
+.traits{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:16px}
+.card{
+  min-height:265px;border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:25px 17px;
+  background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(0,0,0,.7));
+  position:relative;overflow:hidden;transition:.45s;opacity:0;transform:translateY(35px);
+}
+.card.visible{opacity:1;transform:none}
+.card:hover{transform:translateY(-9px) scale(1.02);box-shadow:0 20px 45px rgba(255,179,0,.14)}
+.card:before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;right:-50px;top:-50px;background:var(--glow);filter:blur(35px);opacity:.3}
+.icon{font-size:48px;margin-bottom:18px;filter:drop-shadow(0 0 12px var(--glow));animation:iconFloat 3s ease-in-out infinite}
+@keyframes iconFloat{50%{transform:translateY(-5px) rotate(2deg)}}
+.card h3{font-size:20px;color:var(--accent);margin-bottom:12px;letter-spacing:1px}
+.card p{font-size:14px;line-height:1.65;color:#ddd}
+.card.deen{--accent:#ffc43d;--glow:#ffae00}.card.belief{--accent:#42ff86;--glow:#19ff72}
+.card.dream{--accent:#ffbd35;--glow:#ff9d00}.card.vibe{--accent:#57b5ff;--glow:#168cff}
+.card.mind{--accent:#5de6ff;--glow:#00bfff}
+
+.connect-title{text-align:center;margin:20px 0 25px;font-size:17px;letter-spacing:4px;color:#ddd}
+.connect-title span{color:var(--gold)}
+.connect{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.social{
+  border:1px solid var(--accent);border-radius:20px;min-height:180px;padding:24px 16px;text-align:center;
+  background:linear-gradient(150deg,rgba(255,255,255,.04),rgba(0,0,0,.7));position:relative;overflow:hidden;
+  transition:.4s;opacity:0;transform:scale(.94)
+}
+.social.visible{opacity:1;transform:scale(1)}
+.social:hover{transform:translateY(-8px);box-shadow:0 0 35px var(--glow)}
+.social .big{font-size:43px;filter:drop-shadow(0 0 14px var(--glow));animation:pulse 2s infinite}
+@keyframes pulse{50%{filter:drop-shadow(0 0 25px var(--glow))}}
+.social h3{margin:12px 0 3px;color:var(--accent);font-size:15px}
+.social small{color:#ddd}
+.cta{display:inline-block;margin-top:17px;padding:9px 22px;border:1px solid var(--accent);border-radius:22px;font-size:13px;transition:.3s}
+.cta:hover{background:var(--accent);color:#000;box-shadow:0 0 20px var(--glow)}
+.telegram{--accent:#43b9ff;--glow:#148fff}.bot{--accent:#b85cff;--glow:#9b21ff}
+.ig1{--accent:#ff4b8b;--glow:#ff1f74}.ig2{--accent:#ff4b8b;--glow:#ff1f74}
+
+.quote{
+  margin:30px 0;border:1px solid rgba(255,179,0,.35);border-radius:24px;padding:26px;text-align:center;
+  background:linear-gradient(90deg,rgba(255,179,0,.04),rgba(255,255,255,.025),rgba(255,179,0,.04));
+  font-size:18px;line-height:1.7;color:#eee;position:relative;overflow:hidden
+}
+.quote strong{color:var(--gold2)}
+.quote:before,.quote:after{content:"“";position:absolute;font-size:80px;color:var(--gold);opacity:.5}
+.quote:before{left:35px;top:-20px}.quote:after{right:35px;bottom:-55px;transform:rotate(180deg)}
+
+footer{padding:20px 0 35px;text-align:center;color:#888;font-size:12px;letter-spacing:2px}
+footer b{color:#ddd}.top{
+  position:fixed;right:22px;bottom:22px;width:48px;height:48px;border-radius:50%;
+  border:1px solid var(--gold);background:#050505;color:#fff;font-size:22px;z-index:90;
+  box-shadow:0 0 20px rgba(255,179,0,.2);cursor:pointer;transition:.3s
+}
+.top:hover{transform:translateY(-5px);box-shadow:0 0 30px rgba(255,179,0,.5)}
+
+.particles{position:absolute;inset:0;pointer-events:none;z-index:1}
+.particle{position:absolute;width:3px;height:3px;background:#fff;border-radius:50%;box-shadow:0 0 10px #fff;animation:rise linear infinite;opacity:.6}
+@keyframes rise{from{transform:translateY(20vh);opacity:0}20%{opacity:.8}to{transform:translateY(-100vh);opacity:0}}
+
+@media(max-width:900px){
+  .navlinks{display:none;position:absolute;top:74px;left:0;right:0;background:rgba(3,3,3,.96);padding:18px;flex-direction:column;gap:10px;border-bottom:1px solid #222}
+  .navlinks.open{display:flex}.menu{display:block}.navbtn{display:none}
+  .flag{width:78%;top:160px;height:210px;opacity:.7}.moon{right:13%;top:120px}
+  .hero{min-height:700px}.hero-content{margin-top:170px}.bismillah{font-size:30px}
+  .traits{grid-template-columns:repeat(2,1fr)}.connect{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+  .hero{min-height:660px}.hero h1{letter-spacing:-4px}.hero-sub{letter-spacing:2px;font-size:11px}
+  .flag{left:-12%;width:95%;height:180px;top:165px}.moon{width:62px;height:62px;right:12%;top:120px}.moon:after{width:62px;height:62px;left:18px;top:-6px}
+  .traits,.connect{grid-template-columns:1fr}.card{min-height:220px}.social{min-height:170px}
+  .identity{padding:25px 15px}.quote{font-size:16px}
+}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="#home">ZX</a>
+    <nav class="navlinks" id="navlinks">
+      <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#deen">Deen</a>
+      <a href="#goals">Goals</a><a href="#vibes">Vibes</a><a href="#connect">Connect</a>
+    </nav>
+    <a class="navbtn" href="https://t.me/who_is_zerrox" target="_blank">Join Telegram ✈</a>
+    <button class="menu" id="menu" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="hero-bg"></div><div class="particles" id="particles"></div>
+  <div class="flag"></div><div class="moon"></div>
+  <div class="hero-content container">
+    <div class="kicker">MY IDENTITY • MY JOURNEY</div>
+    <div class="bismillah">﷽</div>
+    <h1>ZERROX</h1>
+    <div class="hero-sub">FROM INDIA <b>•</b> MUSLIM <b>•</b> ALHAMDULILLAH 🇮🇳</div>
+    <div class="mini-line">ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ</div>
+    <div class="hero-note">Grateful to <b style="color:#ffd05b">ALLAH</b> for everything</div>
+    <a class="scroll" href="#about">SCROLL <span></span></a>
+  </div>
+</section>
+
+<section class="section" id="about">
+<div class="container">
+  <div class="identity reveal">
+    <div class="eyebrow">• MY IDENTITY •</div>
+    <p>Not Perfect, But Trying To Be <span>Better ♡</span></p>
+  </div>
+  <div class="traits" id="deen">
+    <article class="card deen reveal"><div class="icon">🕌</div><h3>DEEN</h3><p>Islam is my Identity,<br>Quran is my Guide,<br>Allah is my Strength.</p></article>
+    <article class="card belief reveal"><div class="icon">☪︎</div><h3>BELIEF</h3><p>Allah has a better<br>plan for me, even if<br>I don't understand it.</p></article>
+    <article class="card dream reveal" id="goals"><div class="icon">♛</div><h3>DREAM</h3><p>Create my own legacy<br>that inspires millions<br>and makes my parents proud.</p></article>
+    <article class="card vibe reveal" id="vibes"><div class="icon">◉</div><h3>VIBE</h3><p>Hustle in silence,<br>let success<br>make the noise.</p></article>
+    <article class="card mind reveal"><div class="icon">🧠</div><h3>MINDSET</h3><p>Learn, Improve,<br>Evolve and<br>never stop growing.</p></article>
+  </div>
+</div>
+</section>
+
+<section class="section" id="connect">
+<div class="container">
+  <div class="connect-title">✦ <span>CONNECT WITH ME</span> ✦</div>
+  <div class="connect">
+    <article class="social telegram reveal"><div class="big">✈</div><h3>TELEGRAM CHANNEL</h3><small>Who is ZERROX</small><br><a class="cta" href="https://t.me/who_is_zerrox" target="_blank">JOIN NOW →</a></article>
+    <article class="social bot reveal"><div class="big">🤖</div><h3>SUPPORT BOT</h3><small>Talk to ZERROX</small><br><a class="cta" href="https://t.me/Zerrox_helping_bot" target="_blank">CHAT NOW →</a></article>
+    <article class="social ig1 reveal"><div class="big">◎</div><h3>INSTAGRAM 01</h3><small>zerrox</small><br><a class="cta" href="https://www.instagram.com/zerrox_786._?igsh=MWJxbmFwaDc3ZDNydg==" target="_blank">FOLLOW →</a></article>
+    <article class="social ig2 reveal"><div class="big">◎</div><h3>INSTAGRAM 02</h3><small>zerrox_hu</small><br><a class="cta" href="https://www.instagram.com/zerrox_hu?igsh=bnN6dmFtbzM5" target="_blank">FOLLOW →</a></article>
+  </div>
+  <div class="quote reveal">I'm not here to fit in,<br>I'm here to stand out with my <strong>Deen</strong> and my <strong>Destiny.</strong> ♡</div>
+</div>
+</section>
+</main>
+
+<footer>© 2024 ZERROX • ALL RIGHTS RESERVED &nbsp; • &nbsp; STAY REAL • STAY BLESSED ☾ &nbsp; • &nbsp; MADE WITH ♡ FOR THE UMMAH</footer>
+<button class="top" id="top" aria-label="Back to top">↑</button>
+
+<script>
+const menu=document.getElementById('menu'), nav=document.getElementById('navlinks');
+menu.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%5)*70+'ms';observer.observe(el)});
+
+const p=document.getElementById('particles');
+for(let i=0;i<42;i++){
+  const s=document.createElement('span');s.className='particle';
+  s.style.left=Math.random()*100+'%';s.style.top=(50+Math.random()*60)+'%';
+  s.style.animationDuration=(5+Math.random()*10)+'s';s.style.animationDelay=(-Math.random()*12)+'s';
+  p.appendChild(s);
+}
+document.getElementById('top').onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+
+const sections=[...document.querySelectorAll('main section[id]')], links=[...document.querySelectorAll('.navlinks a')];
+window.addEventListener('scroll',()=>{
+  let current='home';
+  sections.forEach(s=>{if(scrollY>=s.offsetTop-160) current=s.id});
+  links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current));
+});
+</script>
+</body>
+</html>
